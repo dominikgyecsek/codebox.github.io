@@ -11,7 +11,7 @@ html, body {
   line-height: 2em;
   box-sizing: border-box; }
   html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 {
-    font-family: "Fjalla One", sans-serif;
+    font-family: "Muli", sans-serif;
     line-height: 1.3em; }
   html input, body input {
     width: 100%; }
@@ -19,6 +19,8 @@ html, body {
     text-align: center; }
   html .section-header, body .section-header {
     font-size: 2em; }
+  html .sub-section-header, body .sub-section-header {
+    margin-top: 0px !important; }
   @media (max-width: 400px) {
     html .sub-section-header, body .sub-section-header {
       text-align: center; } }
@@ -54,7 +56,8 @@ html, body {
         html #wrapper #mobile-nav #mobile-nav-center li, body #wrapper #mobile-nav #mobile-nav-center li {
           margin-bottom: 1em; }
         html #wrapper #mobile-nav #mobile-nav-center .nav-link-group, body #wrapper #mobile-nav #mobile-nav-center .nav-link-group {
-          text-align: center; }
+          text-align: center;
+          font-family: "Muli", sans-serif; }
         html #wrapper #mobile-nav #mobile-nav-center .mobil-link, body #wrapper #mobile-nav #mobile-nav-center .mobil-link {
           cursor: pointer; }
     html #wrapper nav.secondary-nav, body #wrapper nav.secondary-nav {
@@ -106,7 +109,8 @@ html, body {
           html #wrapper nav ul li a.nav-links, body #wrapper nav ul li a.nav-links {
             cursor: pointer; }
       html #wrapper nav #nav-link-group, body #wrapper nav #nav-link-group {
-        float: right; }
+        float: right;
+        font-family: "Muli", sans-serif; }
         html #wrapper nav #nav-link-group li, body #wrapper nav #nav-link-group li {
           margin-left: 12px; }
         html #wrapper nav #nav-link-group li, body #wrapper nav #nav-link-group li {
@@ -115,6 +119,10 @@ html, body {
           border-bottom: 1px solid #757575; }
       html #wrapper nav li.section-link, html #wrapper nav li.redirect-link, body #wrapper nav li.section-link, body #wrapper nav li.redirect-link {
         cursor: pointer; }
+    html #wrapper #mockup-holder, body #wrapper #mockup-holder {
+      z-index: 1;
+      position: relative;
+      background-color: #F6F6F6; }
     html #wrapper main, body #wrapper main {
       width: 100%;
       height: 100%;
@@ -143,7 +151,14 @@ html, body {
         font-size: 1.3em;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
         html #wrapper main section .feature-section-info, body #wrapper main section .feature-section-info {
-          padding: 24px; }
+          padding: 12px;
+          height: 360px; }
+        @media (max-width: 767px) {
+          html #wrapper main section .feature-section-info, body #wrapper main section .feature-section-info {
+            height: auto; } }
+        html #wrapper main section .feature-icon, body #wrapper main section .feature-icon {
+          width: 64px;
+          height: 64px; }
         html #wrapper main section .section-picture-full, body #wrapper main section .section-picture-full {
           width: 100%;
           height: 100%;
@@ -184,7 +199,7 @@ html, body {
             position: absolute;
             background-color: #55acee;
             right: -1px;
-            width: 139px;
+            width: 138px;
             z-index: 100;
             border-radius: 0px 0px 4px 4px; }
             html #wrapper main section #action-btns #dropdown-menu span, body #wrapper main section #action-btns #dropdown-menu span {
@@ -210,8 +225,7 @@ html, body {
           html #wrapper main section #action-btns #change-platform, body #wrapper main section #action-btns #change-platform {
             margin-left: 4px; }
         html #wrapper main section .article-section, body #wrapper main section .article-section {
-          font-size: 1.1em;
-          margin-bottom: 24px; }
+          font-size: 1.1em; }
         html #wrapper main section .lead, body #wrapper main section .lead {
           font-size: 1.2em;
           line-height: 1.6em;
@@ -316,11 +330,12 @@ p {
         margin-right: 6px; }
     #timeline .timeline-entry .version {
       font-weight: bold;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       display: inline-block;
       padding-bottom: 12px;
       text-align: center;
-      width: 100%; }
+      width: 100%;
+      font-family: "Muli", sans-serif; }
     #timeline .timeline-entry .date {
       font-style: italic;
       float: right;
