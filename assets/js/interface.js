@@ -7,19 +7,7 @@ $(document).ready(function() {
 	
 	$(".menu-toggle-btn").click(interface.toggleMenu);
 	$(".nav-links").click( function() { interface.switchSection( $(this) ) } )
-	$("section").scroll(function() {
-
-		var scrollPosition = $(this).scrollTop();
-		var scrollHeight = $(this)[0].scrollHeight;
-		var outerHeight = $(this).outerHeight();
-
-		if ( interface.prevScroll < scrollPosition ) $("footer").removeClass("footer-active");
-		else $("footer").addClass("footer-active");
-		if ( outerHeight + scrollPosition == scrollHeight ) $("footer").addClass("footer-active");
-
-		interface.prevScroll = scrollPosition;
-
-	})
+	$("section").scroll(function() { interface.scroll( $(this) ) })
 
 })
 
@@ -55,10 +43,26 @@ Interface.prototype.switchSection = function( $this ) {
 
 	setTimeout(function() {
 		$(".section-out").removeClass("section-out");
+		$(".footer-active").removeClass("footer-active");
 	}, 350)
 
 	$(".section-active").scrollTop(0);
+	
 	interface.prevScroll = 0;
+
+}
+
+Interface.prototype.scroll = function ( $this ) {
+
+	var scrollPosition = $this.scrollTop();
+	var scrollHeight = $this[0].scrollHeight;
+	var outerHeight = $this.outerHeight();
+
+	if ( interface.prevScroll < scrollPosition ) $("footer").removeClass("footer-active");
+	else $("footer").addClass("footer-active");
+	if ( outerHeight + scrollPosition == scrollHeight ) $("footer").addClass("footer-active");
+
+	interface.prevScroll = scrollPosition;
 
 }
 

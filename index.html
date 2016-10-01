@@ -53,6 +53,7 @@
 							<div class="col-sm-12">
 
 								<img src="assets/images/logo.gif" class="logo" width="42px" height="42px">
+								<span id="app-name">CodeBox</span>
 
 								<ul id="nav-link-group" class="col-sm-hide col-md-hide">
 									<li><a data-section-id-a="0" class="nav-links">FEATURES</a></li>
@@ -95,6 +96,23 @@
 					<div class="col-md-10 col-sm-12 lead">
 
 						CodeBox is a user-friendly snippet manager which changes the way you organize all your code snippets, and provides a seamless synchronization across Windows, Linux and Mac.
+
+					</div>
+
+					<div class="col-md-1 col-sm-hide"> &nbsp </div>
+
+				</div>
+
+				<div class="row" style="margin-bottom:36px;">
+
+					<div class="col-md-1 col-sm-hide"> &nbsp </div>
+
+					<div class="col-md-10 col-sm-12">
+
+						<ul>
+							<li> <strong> Compatibility: </strong> Windows 7, MacOS 10.9, Ubuntu 10.10 or later </li>
+							<li> <strong> Last version: </strong> v1.5.4 (28/09/2016) </li>
+						</ul>
 
 					</div>
 
@@ -220,7 +238,7 @@
 
 					<img src="assets/images/syntax.png" class="feature-icon">
 
-						<h2 class="sub-section-header"> Syntax Highlighting </h2>
+						<h2 class="sub-section-header"> Code Highlighting </h2>
 
 						<div class="article-section">
 
@@ -646,39 +664,19 @@
 
 				<div class="row">
 
-					<div class="col-sm-12 col-md-6">
+					<div class="col-sm-12 flex-parent">
 
-						<ul>
-							<li>
-								<img src="assets/images/logo.gif" class="logo" width="42px" height="42px">
-								<span id="app-name">CodeBox</span>
-							</li>
-							<li style="padding-top: 30px">
-								Follow us
-							</li>
-							<li>
-							<!--https://www.facebook.com/CodeBox-1169130826442101/-->
-<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2FCodeBox-1169130826442101%2F&width=78&layout=button_count&action=like&show_faces=false&share=false&height=21&appId" width="78" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-							</li>
-						</ul>
+						<div class="align-center">
+
+						<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2FCodeBox-1169130826442101%2F&width=78&layout=button_count&action=like&show_faces=false&share=true&height=21&appId" width="124" height="46" style="border:none;overflow:hidden;height:21px;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+						
+						<a class="twitter-share-button"
+						  href="https://twitter.com/intent/tweet?text=@c0debox%20A%20new%20to%20manage%20all%20your%20code%20snippets.">
+						Tweet</a>
+
+						</div>
 
 					</div>
-
-					<div class="col-sm-12 col-md-6">
-
-						<ul>
-							<li> <strong> Seller: </strong> Dominik Gyecsek </li>
-							<li> <strong> Compatibility: </strong> Windows 7,<br> MacOS 10.9, Ubuntu 10.10 or later </li>
-							<li> <strong> Last version: </strong> v1.5.4 (28/09/2016) </li>
-						</ul>
-
-					</div>
-
-				</div>
-
-				<div class="row">
-
-					<hr>
 
 					<div class="col-sm-12 center">
 						© 2016 Dominik Gyecsek
@@ -694,14 +692,22 @@
 
 </div>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 
 <!--<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>-->
 <script src="assets/js/jquery-3.1.0.min.js"></script>
