@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
+	<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Your Website Title" />
+	<meta property="og:description"   content="Your description" />
+	<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+
 </head>
 <body>
 
@@ -46,7 +52,7 @@
 
 							<div class="col-sm-12">
 
-								<img id="logo"  src="assets/images/logo.gif" width="42px" height="42px">
+								<img src="assets/images/logo.gif" class="logo" width="42px" height="42px">
 
 								<ul id="nav-link-group" class="col-sm-hide col-md-hide">
 									<li><a data-section-id-a="0" class="nav-links">FEATURES</a></li>
@@ -640,16 +646,42 @@
 
 				<div class="row">
 
-					<div class="col-sm-12">
+					<div class="col-sm-12 col-md-6">
 
-						<ul class="right">
-							<li>right</li>
+						<ul>
+							<li>
+								<img src="assets/images/logo.gif" class="logo" width="42px" height="42px">
+								<span id="app-name">CodeBox</span>
+							</li>
+							<li style="padding-top: 30px">
+								Follow us
+							</li>
+							<li>
+							<!--https://www.facebook.com/CodeBox-1169130826442101/-->
+<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2FCodeBox-1169130826442101%2F&width=78&layout=button_count&action=like&show_faces=false&share=false&height=21&appId" width="78" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+							</li>
 						</ul>
 
-						<ul class="left">
-							<li>left</li>
+					</div>
+
+					<div class="col-sm-12 col-md-6">
+
+						<ul>
+							<li> <strong> Seller: </strong> Dominik Gyecsek </li>
+							<li> <strong> Compatibility: </strong> Windows 7,<br> MacOS 10.9, Ubuntu 10.10 or later </li>
+							<li> <strong> Last version: </strong> v1.5.4 (28/09/2016) </li>
 						</ul>
 
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<hr>
+
+					<div class="col-sm-12 center">
+						© 2016 Dominik Gyecsek
 					</div>
 
 				</div>
@@ -661,6 +693,15 @@
 	</main>
 
 </div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!--<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>-->
 <script src="assets/js/jquery-3.1.0.min.js"></script>

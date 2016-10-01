@@ -21,6 +21,12 @@ html, body
 	input
 		width: 100%
 
+
+	.logo
+		border-radius: 4px
+		position: relative
+		float: left
+
 	.center
 		text-align: center
 
@@ -120,11 +126,6 @@ html, body
 
 			#close-nav
 				float: right
-
-			#logo
-				border-radius: 4px
-				position: relative
-				float: left
 
 			.menu-toggle-btn
 				cursor: pointer
@@ -566,10 +567,29 @@ button:focus, input:focus, textarea:focus
 footer
 	background: whitesmoke
 	position: absolute
-	bottom: -30px
+	top: 100%
 	z-index: 10000
 	width: 100%
-	transition: bottom 0.3s
+	transition: top 0.3s
+	padding: 8px 12px
+	line-height: 1.4em
+
+	#app-name
+		display: inline-block
+		padding: 10px 8px
+		font-size: 1.2em
+		font-weight: bold
+		font-family: 'Muli', sans-serif
+
+	ul
+		
+		li
+			padding: 8px 10px 0px 10px
 
 .footer-active
-	bottom: 0px
+	top: calc(100% - 200px)
+
+@media (max-width: 768px)
+	
+	.footer-active
+		top: calc(100% - 304px)
