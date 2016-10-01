@@ -1,11 +1,25 @@
 var Interface = function() {
 	this.isNavOpen = false
+	this.prevScroll = 0
 }
 
 $(document).ready(function() {
 	
 	$(".menu-toggle-btn").click(interface.toggleMenu);
 	$(".nav-links").click( function() { interface.switchSection( $(this) ) } )
+	$("section").scroll(function() {
+
+		var scrollPosition = $(this).scrollTop();
+		var scrollHeight = $(this)[0].scrollHeight;
+		var outerHeight = $(this).outerHeight();
+
+		if ( interface.prevScroll < scrollPosition ) $("footer").removeClass("footer-active");
+		else $("footer").addClass("footer-active");
+		if ( outerHeight + scrollPosition == scrollHeight ) $("footer").addClass("footer-active");
+
+		interface.prevScroll = scrollPosition;
+
+	})
 
 })
 
@@ -33,6 +47,8 @@ Interface.prototype.switchSection = function( $this ) {
 
 	if (sectionId == currectSectionId) return;
 
+	if ( $this.hasClass("prevent-nav") ) $(".menu-toggle-btn").first().trigger("click");
+
 	$(".section-active").removeClass("section-active").addClass("section-out");
 
 	$("section[data-section-id='" + sectionId + "']").addClass("section-active");
@@ -40,6 +56,9 @@ Interface.prototype.switchSection = function( $this ) {
 	setTimeout(function() {
 		$(".section-out").removeClass("section-out");
 	}, 350)
+
+	$(".section-active").scrollTop(0);
+	interface.prevScroll = 0;
 
 }
 
