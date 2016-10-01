@@ -449,12 +449,6 @@ footer {
   transition: top 0.3s;
   padding: 8px 12px;
   line-height: 1.4em; }
-  footer #app-name {
-    display: inline-block;
-    padding: 10px 8px;
-    font-size: 1.2em;
-    font-weight: bold;
-    font-family: "Muli", sans-serif; }
   footer ul {
     white-space: no-wrap; }
     footer ul li {
