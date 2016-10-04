@@ -408,7 +408,9 @@ textarea {
   border: 1px solid #7393A7;
   color: #757575;
   font-size: 1em;
-  background-color: transparent; }
+  background-color: transparent;
+  border-radius: 0px;
+  -webkit-appearance: none; }
 
 label {
   font-family: "Muli", sans-serif;
