@@ -19,7 +19,8 @@ html, body {
   html .logo, body .logo {
     border-radius: 4px;
     position: relative;
-    float: left; }
+    float: left;
+    margin: 5px 0px; }
   html .center, body .center {
     text-align: center; }
   html .section-header, body .section-header {
