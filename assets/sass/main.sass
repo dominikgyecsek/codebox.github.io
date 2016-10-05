@@ -26,6 +26,7 @@ html, body
 	.logo
 		border-radius: 4px
 		position: relative
+		cursor: pointer
 		float: left
 		margin: 5px 0px
 		
@@ -266,13 +267,19 @@ html, body
 					width: 100%
 
 				.section-header[data-header='1']
-					background-color: rgba(0, 0, 0, 0.25)
+					background: url(../images/image_header_1.png)
+					background-position: center center
+					background-size: cover
 
 				.section-header[data-header='2']
-					background-color: #7393A7
+					background: url(../images/image_header_2.png)
+					background-position: center center
+					background-size: cover
 
 				.section-header[data-header='3']
-					background-color: rgba(0, 0, 0, 0.25)
+					background: url(../images/image_header_3.png)
+					background-position: center center
+					background-size: cover
 
 				.section-header[data-header='4']
 					background: url(../images/image_header_4.png)
@@ -625,6 +632,7 @@ footer
 	background-color: #f5f7f9
 	color: #a7adba
 	padding: 1em
+	overflow: auto
 	border-bottom: 1px solid #d8dee9
 
 	.selector
@@ -635,3 +643,22 @@ footer
 
 	.str
 		color: #c594c5
+
+.path
+	overflow-wrap: break-word
+	word-wrap: break-word
+	font-style: italic
+	font-size: 0.9em
+
+kbd
+	padding: 0px 8px
+	border: 1px solid #ccc
+	font-size: 0.7em
+	background-color: #f7f7f7
+	color: #333
+	box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset
+	border-radius: 3px
+	display: inline-block
+
+img
+	display: block
