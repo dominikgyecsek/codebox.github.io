@@ -181,6 +181,9 @@ html, body {
         html #wrapper main section .section-picture-full[data-picture='1'], body #wrapper main section .section-picture-full[data-picture='1'] {
           background: #646363;
           height: 100%; }
+        html #wrapper main section .section-picture-full[data-picture='4'], body #wrapper main section .section-picture-full[data-picture='4'] {
+          background: #646363;
+          height: 100%; }
         html #wrapper main section .section-header, body #wrapper main section .section-header {
           z-index: 10; }
           html #wrapper main section .section-header h1, body #wrapper main section .section-header h1 {
@@ -195,6 +198,8 @@ html, body {
           background-color: #7393A7; }
         html #wrapper main section .section-header[data-header='3'], body #wrapper main section .section-header[data-header='3'] {
           background-color: rgba(0, 0, 0, 0.25); }
+        html #wrapper main section .section-header[data-header='4'], body #wrapper main section .section-header[data-header='4'] {
+          background-color: rgba(0, 0, 0, 0.25); }
         html #wrapper main section #action-btns, body #wrapper main section #action-btns {
           margin-bottom: 36px; }
           html #wrapper main section #action-btns #download-btn, body #wrapper main section #action-btns #download-btn {
@@ -202,12 +207,15 @@ html, body {
             border: 1px solid #55acee;
             border-radius: 4px;
             position: relative; }
+          @media (max-width: 460px) {
+            html #wrapper main section #action-btns #dropdown-menu, body #wrapper main section #action-btns #dropdown-menu {
+              width: 138px !important; } }
           html #wrapper main section #action-btns #dropdown-menu, body #wrapper main section #action-btns #dropdown-menu {
             display: none;
             position: absolute;
             background-color: #55acee;
             right: -1px;
-            width: 138px;
+            width: 139px;
             z-index: 100;
             border-radius: 0px 0px 4px 4px; }
             html #wrapper main section #action-btns #dropdown-menu span, body #wrapper main section #action-btns #dropdown-menu span {
@@ -223,12 +231,12 @@ html, body {
             html #wrapper main section #action-btns #download-btn:hover #dropdown-menu, body #wrapper main section #action-btns #download-btn:hover #dropdown-menu {
               display: inline-block; }
           html #wrapper main section #action-btns #buy-btn, body #wrapper main section #action-btns #buy-btn {
-            border: 1px solid #76b852;
-            color: #76b852;
+            border: 1px solid #59A985;
+            color: #59A985;
             margin: 0px 10px;
             border-radius: 4px; }
           html #wrapper main section #action-btns #buy-btn:hover, body #wrapper main section #action-btns #buy-btn:hover {
-            background-color: #76b852;
+            background-color: #59A985;
             color: white; }
           html #wrapper main section #action-btns #change-platform, body #wrapper main section #action-btns #change-platform {
             margin-left: 4px; }
@@ -261,6 +269,8 @@ html, body {
       html #wrapper main section[data-section-id='2'], body #wrapper main section[data-section-id='2'] {
         background-color: white; }
       html #wrapper main section[data-section-id='3'], body #wrapper main section[data-section-id='3'] {
+        background-color: #E8ECF1; }
+      html #wrapper main section[data-section-id='4'], body #wrapper main section[data-section-id='4'] {
         background-color: #E8ECF1; }
 
 button {
@@ -363,6 +373,17 @@ p {
     bottom: 30px;
     right: -20px; }
 
+#changelog-all-btn {
+  color: gainsboro;
+  text-decoration: none;
+  background-color: #145374;
+  padding: 4px 10px;
+  border-radius: 3px;
+  white-space: nowrap;
+  position: relative;
+  left: -48px;
+  bottom: 10px; }
+
 /* Q&A */
 .qa {
   padding: 0px 20px 20px 20px; }
@@ -409,13 +430,13 @@ textarea {
   color: #757575;
   font-size: 1em;
   background-color: transparent;
-  border-radius: 0px;
-  -webkit-appearance: none; }
+  border-radius: 0px !important;
+  -webkit-appearance: none !important; }
 
 label {
   font-family: "Muli", sans-serif;
   position: absolute;
-  top: -24px;
+  top: -23px;
   background: #7393A7;
   left: 0px;
   border: 1px solid #7393A7;

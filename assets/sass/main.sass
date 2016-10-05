@@ -1,5 +1,5 @@
 $grey-6: #757575
-$green: #76b852
+$green: #59A985
 $light-blue: #55acee
 
 html, body 
@@ -243,6 +243,11 @@ html, body
 					background: #646363
 					height: 100%
 
+				.section-picture-full[data-picture='4']
+					background: #646363
+					height: 100%
+
+
 				.section-header
 					z-index: 10
 
@@ -263,6 +268,9 @@ html, body
 				.section-header[data-header='3']
 					background-color: rgba(0, 0, 0, 0.25)
 
+				.section-header[data-header='4']
+					background-color: rgba(0, 0, 0, 0.25)
+
 				#action-btns
 					margin-bottom: 36px
 
@@ -272,12 +280,17 @@ html, body
 						border-radius: 4px
 						position: relative
 
+					@media (max-width: 460px)
+
+						#dropdown-menu
+							width: 138px !important
+
 					#dropdown-menu
 						display: none
 						position: absolute
 						background-color: #55acee
 						right: -1px
-						width: 138px
+						width: 139px
 						z-index: 100
 						border-radius: 0px 0px 4px 4px
 
@@ -351,6 +364,9 @@ html, body
 				background-color: white
 
 			section[data-section-id='3']
+				background-color: #E8ECF1
+
+			section[data-section-id='4']
 				background-color: #E8ECF1
 
 .row
@@ -474,6 +490,17 @@ p
 		bottom: 30px
 		right: -20px
 
+#changelog-all-btn
+	color: gainsboro
+	text-decoration: none
+	background-color: #145374
+	padding: 4px 10px
+	border-radius: 3px
+	white-space: nowrap
+	position: relative
+	left: -48px
+	bottom: 10px
+
 /* Q&A */
 
 .qa
@@ -530,13 +557,13 @@ textarea
 	color: $grey-6
 	font-size: 1em
 	background-color: transparent
-	border-radius: 0px
-	-webkit-appearance: none
+	border-radius: 0px !important
+	-webkit-appearance: none !important
 
 label
 	font-family: 'Muli', sans-serif
 	position: absolute
-	top: -24px
+	top: -23px
 	background: #7393A7
 	left: 0px
 	border: 1px solid #7393A7
