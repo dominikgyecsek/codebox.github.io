@@ -684,13 +684,56 @@
 
 				<div class="row section-picture-full" data-picture="4">
 
+
 				</div>
 
 			</div>
 
 			<div class="container">
 
-				
+
+				<div class="col-md-1 col-sm-hide"> </div>
+
+				<div class="col-md-10 col-sm-12 lead">
+
+					<p>Codebox runs on Electron and built with HTML, CSS, JavaScript, and Node modules. So you can easily and fully customeize the interface with CSS.</p>
+
+					<p> <a> Download </a> the unminified css file and replace the minified version in CodeBox/resources/app/assets/css/core.css, this includes all the stlyes that make up the application except for the code editor which located in CodeBox/resources/app/assets/CodeMirror/lib/codemirror.css and at the end you can find the individual skins that can be set from settings, you can create a new theme in the following way</p>
+
+<pre class="snippet"><span class="selector">html[skin='4] #wrapper</span>, <span class="selector">html[skin='3'] #toolbar-drop</span> {
+	<span class="attr">background:</span> <span class="str">white; </span>
+	<span class="attr">color:</span> <span class="str">#737373; </span>
+}</pre>
+
+					<p>If you want to share your theme, I would be more then happy to include it in future version</p>
+
+					<p>In case you want more then to change the basic appearance then you should enable developer options for easier debugging, just delete the comment from this line in CodeBox/resources/app/main.js
+
+<pre class="snippet">
+mainWindow.webContents.openDevTools();
+</pre>
+
+
+					
+
+					<p>You can also easily reload CodeBox by pressing Ctrl + F5</p>
+
+
+
+					<!--
+
+
+						Download normal code
+
+						Code field instructions
+
+						How to open Chrome Dev Mode
+
+					-->
+
+				</div>
+
+				<div class="col-md-1 col-sm-hide"> </div>						
 
 			</div>
 
