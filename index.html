@@ -86,7 +86,7 @@
 
 						<div class="col-lg-4 col-sm-12 max-height flex-parent">
 
-							<div class="align-center">
+							<div class="align-center splash-section">
 
 								<h1 class="center section-header">CodeBox</h1>
 
@@ -107,21 +107,26 @@
 
 								<div id="action-btns" class="clearfix">
 
-									<button id="buy-btn" class="right align-center"><span class="button-text round">Buy</span></button>
+									<div class="flex-parent">
 
-									<button id="download-btn" class="right align-center">
+										<button id="buy-btn"><span class="align-center button-text round">Buy</span></button>
 
-										<span class="button-text round">Download
-											<i class="material-icons right" id="change-platform">keyboard_arrow_down</i>
-										</span>
+										<button id="download-btn" class="align-center">Download for 
+											<a href="#" data-platform="1" class="platform">Windows</a>
+											<a href="#" data-platform="2" class="platform">Mac</a>
+											<a href="#" data-platform="3" class="platform">Linux</a>
+										</button>
 
-										<span id="dropdown-menu">
-											<span>Windows</span>
-											<span>Mac</span>
-											<span>Linux</span>
-										</span>
+									</div>
 
-									</button>
+								</div>
+
+								<div id="alt-platform" class="clearfix">
+
+									 Download for
+									 <a href="#" data-platform="1" class="platform-alt">Windows</a>
+									 <a href="#" data-platform="2" class="platform-alt">Mac</a>
+									 <a href="#" data-platform="3" class="platform-alt">Linux</a>
 
 								</div>
 
@@ -131,7 +136,7 @@
 
 						<div class="col-lg-8 col-sm-12 max-height flex-parent">
 
-							<div class="align-center">
+							<div class="align-center splash-section">
 
 								<img id="mockup" src="assets/images/main.png" width="100%">
 
@@ -153,7 +158,7 @@
 
 			</div>
 
-			<div class="container">
+			<div class="container" id="features-more">
 
 				<div class="row">
 
@@ -164,7 +169,7 @@
 						<h2 class="sub-section-header"> Synchronization </h2>
 
 						<div class="article-section">
-							By enabling sync you can access your snippets from anywhere on Mac, Windows and Linux
+							By enabling synchronization you can have all your snippets downloaded and kept up-to-date on all your Macs, Windowses, Linuxes and in your browser.
 						</div>
 
 					</div>
@@ -176,7 +181,7 @@
 						<h2 class="sub-section-header"> Backup </h2>
 
 						<div class="article-section">
-							Yout also have the option to export all your snippets to a folder and keep them updated. You can also export based on a filter or a search
+							Yout also have the option to export all your snippets to a folder and keep them updated. You can also user individual export based on a filter or search.
 						</div>
 
 					</div>
@@ -188,7 +193,7 @@
 						<h2 class="sub-section-header"> Fragments </h2>
 
 						<div class="article-section">
-							You can add unlimited fragments to snippets, so if you have more solution to a problem or want to keep old version of your code, you can also inlude comment to each fragment.
+							You can add multiple fragments to one snippet, so you can separate different solutions to the same problem, and comment them separately.
 						</div>
 
 					</div>
@@ -238,7 +243,7 @@
 						<h2 class="sub-section-header"> Notifications </h2>
 
 						<div class="article-section">
-							Stay in the loop by getting a new notification if someone you shared your snippets with commited a change or a snippet has been shared with you
+							Stay in the loop by getting a new notification if someone you shared your snippets with commited a change or a snippet has been shared with you.
 						</div>
 
 					</div>
@@ -250,7 +255,7 @@
 						<h2 class="sub-section-header"> Sharing </h2>
 
 						<div class="article-section">
-							You can create groups and share snippets with all group members, who can edit them and keep you updated about new fragments, you can also share snippets with only a friend.
+							You can create groups and share snippets with all group members or just with a friend, who can edit them and keep you updated about new fragments.
 						</div>
 
 					</div>
@@ -684,7 +689,7 @@
 
 					<p> <a> Download </a> the unminified css file and replace the minified version in <span class="path">CodeBox/resources/app/assets/css/core.css</span>, this includes all the stlyes that make up the application except for the code editor which located in <span class="path">CodeBox/resources/app/assets/CodeMirror/lib/codemirror.css</span> and at the end you can find the individual skins that can be set from settings, you can create a new theme in the following way</p>
 
-<pre class="snippet"><span class="selector">html[skin='4] #wrapper</span>, <span class="selector">html[skin='3'] #toolbar-drop</span> {
+<pre class="snippet"><span class="selector">html[skin='4] #wrapper</span>, <span class="selector">html[skin='4'] #toolbar-drop</span> {
 	<span class="attr">background:</span> <span class="str">white; </span>
 	<span class="attr">color:</span> <span class="str">#737373; </span>
 }</pre>

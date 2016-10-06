@@ -8,6 +8,25 @@ $(document).ready(function() {
 	$(".menu-toggle-btn").click(interface.toggleMenu);
 	$(".nav-links").click( function() { interface.switchSection( $(this) ) } )
 	$("section").scroll(function() { interface.scroll( $(this) ) })
+	$("#more-feature").click( function() {
+		$(".section-active").first().animate({
+			scrollTop: $("#features-more").position().top - 60
+		}, 300);
+		console.log($("#features-more").offset().top)
+	} )
+
+	var platform;
+
+	if (navigator.appVersion.indexOf("Win")!=-1) {
+		platform="1";
+	} else if (navigator.appVersion.indexOf("Mac")!=-1) {
+		platform="2";
+	} else if (navigator.appVersion.indexOf("Linux")!=-1) {
+		platform="3";
+	}
+
+	$(".platform[data-platform='" + platform + "']").show();
+	$(".platform-alt[data-platform='" + platform + "']").hide();
 
 })
 

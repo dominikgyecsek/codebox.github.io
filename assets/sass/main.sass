@@ -1,6 +1,6 @@
 $grey-6: #757575
 $green: #59A985
-$light-blue: #55acee
+$orange: #F78536
 
 html, body 
 	width: 100%
@@ -215,7 +215,7 @@ html, body
 				box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
 
 				.feature-section-info 
-					padding: 10px 30px
+					padding: 20px 25px 0px 25px
 					height: 360px
 
 				@media (max-width: 767px)
@@ -280,11 +280,15 @@ html, body
 					background: url(../images/image_header_4.png)
 
 				#action-btns
-					margin: 24px 0px 36px 0px
+					margin: 36px 0px 0px 0px
+
+					button
+						margin: 0px 5px
+						font-size: 0.85em
 
 					#download-btn
-						color: $light-blue
-						border: 1px solid $light-blue
+						color: $orange
+						border: 1px solid $orange
 						border-radius: 4px
 						position: relative
 
@@ -312,7 +316,7 @@ html, body
 							padding-bottom: 8px
 
 					#download-btn:hover
-						background-color: $light-blue
+						background-color: $orange
 						color: white
 
 						#dropdown-menu
@@ -321,7 +325,6 @@ html, body
 					#buy-btn
 						border: 1px solid $green
 						color: $green
-						margin: 0px 10px
 						border-radius: 4px
 
 					#buy-btn:hover
@@ -335,7 +338,7 @@ html, body
 					font-size: 1.1em
 
 				.lead
-					font-size: 1.2em
+					font-size: 1.1em
 					line-height: 1.6em
 					margin-bottom: 36px
 
@@ -666,6 +669,7 @@ img
 	bottom: 0px
 	display: block
 	text-align: center
+	cursor: pointer
 
 	i
 		font-size: 48px
@@ -693,3 +697,25 @@ img
 	
 	.max-height
 		height: auto !important
+
+	.splash-section
+	position: static
+
+.splash-section
+	position: relative
+	top: -30px
+
+.platform
+	display: none
+
+.platform, .platform-alt
+	color: inherit
+	text-decoration: none
+
+#alt-platform
+	margin-bottom: 36px
+	font-size: 0.7em
+	text-align: center
+
+	.platform-alt
+		margin-left: 3px
