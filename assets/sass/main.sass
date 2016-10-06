@@ -171,11 +171,6 @@ html, body
 			position: relative
 			background-color: #F6F6F6
 
-			@media (min-width: 768px)
-
-				#mockup
-					content: url("../images/main.png")
-
 		main
 			width: 100%
 			height: 100%
@@ -285,7 +280,7 @@ html, body
 					background: url(../images/image_header_4.png)
 
 				#action-btns
-					margin-bottom: 36px
+					margin: 24px 0px 36px 0px
 
 					#download-btn
 						color: $light-blue
@@ -662,3 +657,39 @@ kbd
 
 img
 	display: block
+
+#mockup-holder
+	min-height: calc(100% + 60px)
+
+#more-feature
+	position: absolute
+	bottom: 0px
+	display: block
+	text-align: center
+
+	i
+		font-size: 48px
+
+@media (max-width: 1024px)
+
+	#mockup-holder
+		min-height: auto !important
+
+#mockup-container
+	min-height: calc(100vh - 60px)
+
+@media (max-width: 1024px)
+
+	#mockup-container
+		min-height: auto !important
+
+	#more-feature
+		display: none
+
+.max-height
+	height: calc(100vh - 60px)
+
+@media (max-width: 1024px)
+	
+	.max-height
+		height: auto !important
