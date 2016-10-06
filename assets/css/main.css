@@ -27,14 +27,11 @@ html, body {
   html .section-header, body .section-header {
     font-size: 2em; }
   html .sub-section-header, body .sub-section-header {
-    margin-top: 0px !important; }
-  @media (max-width: 400px) {
-    html .sub-section-header, body .sub-section-header {
-      text-align: center; }
-    html .feature-icon, body .feature-icon {
-      left: 50%;
-      position: relative;
-      transform: translate(-50%, 0); } }
+    margin-top: 0px !important;
+    text-align: center;
+    font-size: 1.4em; }
+  html .feature-icon, body .feature-icon {
+    margin: auto; }
   html #wrapper, body #wrapper {
     background-color: white;
     width: 100%;
@@ -130,6 +127,9 @@ html, body {
       z-index: 1;
       position: relative;
       background-color: #F6F6F6; }
+      @media (min-width: 768px) {
+        html #wrapper #mockup-holder #mockup, body #wrapper #mockup-holder #mockup {
+          content: url("../images/main.png"); } }
     html #wrapper main, body #wrapper main {
       width: 100%;
       height: 100%;
@@ -164,7 +164,7 @@ html, body {
         font-size: 1.3em;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
         html #wrapper main section .feature-section-info, body #wrapper main section .feature-section-info {
-          padding: 12px;
+          padding: 10px 30px;
           height: 360px; }
         @media (max-width: 767px) {
           html #wrapper main section .feature-section-info, body #wrapper main section .feature-section-info {
