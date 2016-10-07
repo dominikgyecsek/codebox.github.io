@@ -24,17 +24,20 @@ $(document).ready(function() {
 	});
 	
 	$("#more-feature").click( function() {
+
+		console.log($("#features-more").position().top)
 		$(".section-active").first().animate({
-			scrollTop: $("#features-more").position().top - 60
+			scrollTop: $("#mockup-holder").prop("scrollHeight")
 		}, 300);
-		console.log($("#features-more").offset().top)
 	} )
 
 	$("#mockup, #close-carousel").click(function() {
+
 		$("#mockup").parent().parent().toggleClass("mockup-active");
 		if ( $(this).attr("id") == "close-carousel" ) {
 			interface.initilizeCarousel();
 		}
+
 	})
 
 })
