@@ -30,8 +30,11 @@ $(document).ready(function() {
 		console.log($("#features-more").offset().top)
 	} )
 
-	$("#mockup").click(function() {
-		$("#mockup").parent().parent().toggleClass("mockup-active")
+	$("#mockup, #close-carousel").click(function() {
+		$("#mockup").parent().parent().toggleClass("mockup-active");
+		if ( $(this).attr("id") == "close-carousel" ) {
+			interface.initilizeCarousel();
+		}
 	})
 
 })
@@ -55,10 +58,16 @@ Interface.prototype.init = function() {
 
 	setTimeout(function() {
 		$(".right.gallery-swipe").first().trigger("click");
-		interface.galleryInterval = setInterval(function() {
-			$("#auto-swipe").trigger("click");
-		}, 3500);
+		interface.initilizeCarousel();
 	}, 800);
+
+}
+
+Interface.prototype.initilizeCarousel = function() {
+
+	interface.galleryInterval = setInterval(function() {
+		$("#auto-swipe").trigger("click");
+	}, 3500);
 
 }
 
