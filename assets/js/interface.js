@@ -1,6 +1,9 @@
 var Interface = function() {
-	this.isNavOpen = false
-	this.prevScroll = 0
+	this.isNavOpen = false;
+	this.prevScroll = 0;
+	this.galleryBoundery = 5;
+	this.currentGallery = 5;
+	this.galleryInterval;
 }
 
 $(document).ready(function() {
@@ -8,12 +11,34 @@ $(document).ready(function() {
 	$(".menu-toggle-btn").click(interface.toggleMenu);
 	$(".nav-links").click( function() { interface.switchSection( $(this) ) } )
 	$("section").scroll(function() { interface.scroll( $(this) ) })
+	$(".gallery-swipe, #auto-swipe").click(function() { 
+
+		var left = false;
+		var auto = false;
+
+		if ( $(this).hasClass("left") ) left = true;
+		if ( $(this).attr("id") == "auto-swipe" ) auto = true;
+
+		interface.galerySwipe(left, auto)
+
+	});
+	
 	$("#more-feature").click( function() {
 		$(".section-active").first().animate({
 			scrollTop: $("#features-more").position().top - 60
 		}, 300);
 		console.log($("#features-more").offset().top)
 	} )
+
+	$("#mockup").click(function() {
+		$("#mockup").parent().parent().toggleClass("mockup-active")
+	})
+
+})
+
+Interface.prototype.init = function() {
+
+	this.isNavOpen = false;
 
 	var platform;
 
@@ -28,11 +53,34 @@ $(document).ready(function() {
 	$(".platform[data-platform='" + platform + "']").show();
 	$(".platform-alt[data-platform='" + platform + "']").hide();
 
-})
+	setTimeout(function() {
+		$(".right.gallery-swipe").first().trigger("click");
+		interface.galleryInterval = setInterval(function() {
+			$("#auto-swipe").trigger("click");
+		}, 3500);
+	}, 800);
 
-Interface.prototype.init = function() {
+}
 
-	this.isNavOpen = false;
+Interface.prototype.galerySwipe = function (isLeft, auto) {
+
+	if (!auto) clearInterval(interface.galleryInterval);
+
+	var id = interface.currentGallery;
+
+	if ( isLeft )
+		id--;
+	else
+		id++;
+
+	if (id == 0)
+		id = interface.galleryBoundery;
+	else if (interface.galleryBoundery == id - 1)
+		id = 1
+
+	$("#mockup").attr("src", "assets/images/interface_" + id + ".png");
+
+	interface.currentGallery = id;
 
 }
 
