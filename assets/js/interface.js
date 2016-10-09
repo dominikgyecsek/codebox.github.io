@@ -2,7 +2,7 @@ var Interface = function() {
 	this.isNavOpen = false;
 	this.prevScroll = 0;
 	this.galleryBoundery = 5;
-	this.currentGallery = 5;
+	this.currentGallery = 1;
 	this.galleryInterval;
 }
 
@@ -61,11 +61,10 @@ Interface.prototype.init = function() {
 
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		$("html").addClass("mobile");
-		alert("Mobile ANimation Disabled");
 	}
 
 	setTimeout(function() {
-		$(".right.gallery-swipe").first().trigger("click");
+		$("#auto-swipe").trigger("click");
 		interface.initilizeCarousel();
 	}, 800);
 
@@ -124,6 +123,7 @@ Interface.prototype.switchSection = function( $this ) {
 	$(".section-active").removeClass("section-active").addClass("section-out");
 
 	$("section[data-section-id='" + sectionId + "']").addClass("section-active");
+	$(".section-header[data-header='" + sectionId + "']").removeClass("not-loaded");
 
 	setTimeout(function() {
 		$(".section-out").removeClass("section-out");
