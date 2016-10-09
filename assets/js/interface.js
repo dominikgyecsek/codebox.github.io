@@ -8,6 +8,7 @@ var Interface = function() {
 
 $(document).ready(function() {
 	
+	$("#notify-me").click(server.validate);
 	$(".menu-toggle-btn").click(interface.toggleMenu);
 	$(".nav-links").click( function() { interface.switchSection( $(this) ) } )
 	$("section").scroll(function() { interface.scroll( $(this) ) })
@@ -42,6 +43,82 @@ $(document).ready(function() {
 	})
 
 })
+
+var Server = function() {
+	
+}
+
+Server.prototype.validate = function() {
+	
+	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	result = re.test( $("#email").val() );
+	
+	if (result) {
+		$("#email").removeClass("email-error");
+		server.sendMsg(["1", $("#email").val()])
+	} else {
+		$("#email").addClass("email-error");
+	}
+	
+}
+
+Server.prototype.sendMsg = function( data ) {
+	
+	console.log(data);
+	
+	$.ajax({
+		url: '/CodeBox/assets/php/cbnc.php',
+		type: 'POST',
+		dataType: 'JSON',
+		data: {
+			data: data
+		},
+		success: function(data) {
+			
+			console.log(data);
+			
+			if (data[0] == "1") {
+				$("#email, #notify-me").fadeOut();
+				interface.openNotification("You will be notified when CodeBox is ready", true);
+			}
+			
+		},
+		error: function(data) {
+
+			interface.openNotification("Connection Error", false);
+			
+		}
+	})
+	
+}
+
+var server = new Server();
+
+Interface.prototype.openNotification = function(msg, success) {
+	
+	interface.closeNotification();
+	
+	$("#notification-msg").text(msg);
+	$("#notification-wrapper").addClass("notification-wrapper-open");
+
+	if (success) {
+		$("#notification-wrapper").addClass("notification-success");
+	} else {
+		$("#notification-wrapper").addClass("notification-error");
+	}
+	
+	setTimeout(function() {
+		interface.closeNotification();
+	}, 4000);
+	
+}
+
+Interface.prototype.closeNotification = function() {
+	
+	$("#notification-wrapper").removeClass("notification-wrapper-open");
+	$("#notification-wrapper").removeClass("notification-success notification-error");
+	
+}
 
 Interface.prototype.init = function() {
 
