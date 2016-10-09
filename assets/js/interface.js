@@ -145,7 +145,7 @@ Interface.prototype.scroll = function ( $this ) {
 
 	if ( interface.prevScroll < scrollPosition ) $("footer").removeClass("footer-active");
 	else $("footer").addClass("footer-active");
-	if ( outerHeight + scrollPosition + 10 >= scrollHeight ) $("footer").addClass("footer-active");
+	if ( outerHeight + scrollPosition + 20 >= scrollHeight ) $("footer").addClass("footer-active");
 
 	interface.prevScroll = scrollPosition;
 
