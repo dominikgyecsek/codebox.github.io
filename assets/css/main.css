@@ -143,17 +143,17 @@ html, body {
       html #wrapper main .full-height, body #wrapper main .full-height {
         height: 100%; }
       html #wrapper main section[data-section-id='0'], body #wrapper main section[data-section-id='0'] {
-        padding-bottom: 140px; }
+        padding-bottom: 130px; }
       html #wrapper main section[data-section-id='1'], body #wrapper main section[data-section-id='1'] {
         background-color: #646363 !important;
         padding-bottom: 140px; }
       html #wrapper main section[data-section-id='2'], body #wrapper main section[data-section-id='2'] {
-        padding-bottom: 120px;
+        padding-bottom: 140px;
         background-color: #5588A3 !important; }
       html #wrapper main section[data-section-id='3'], body #wrapper main section[data-section-id='3'] {
-        padding-bottom: 140px; }
+        padding-bottom: 170px; }
       html #wrapper main section[data-section-id='4'], body #wrapper main section[data-section-id='4'] {
-        padding-bottom: 140px; }
+        padding-bottom: 130px; }
         html #wrapper main section[data-section-id='4'] p, body #wrapper main section[data-section-id='4'] p {
           padding: 25px 0px; }
       html #wrapper main section, body #wrapper main section {
@@ -387,17 +387,6 @@ p {
   #timeline .timeline-right {
     bottom: 30px;
     right: -20px; }
-
-#changelog-all-btn {
-  color: gainsboro;
-  text-decoration: none;
-  background-color: #145374;
-  padding: 4px 10px;
-  border-radius: 3px;
-  white-space: nowrap;
-  position: relative;
-  left: -48px;
-  bottom: 10px; }
 
 /* Q&A */
 .qa {
