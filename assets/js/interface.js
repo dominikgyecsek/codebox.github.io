@@ -35,6 +35,7 @@ $(document).ready(function() {
 
 		$("#mockup").parent().parent().toggleClass("mockup-active");
 		if ( $(this).attr("id") == "close-carousel" ) {
+			clearInterval(interface.galleryInterval);
 			interface.initilizeCarousel();
 		}
 
@@ -74,7 +75,7 @@ Interface.prototype.initilizeCarousel = function() {
 
 	interface.galleryInterval = setInterval(function() {
 		$("#auto-swipe").trigger("click");
-	}, 3500);
+	}, 2500);
 
 }
 
@@ -94,7 +95,7 @@ Interface.prototype.galerySwipe = function (isLeft, auto) {
 	else if (interface.galleryBoundery == id - 1)
 		id = 1
 
-	$("#mockup").attr("src", "assets/images/interface_" + id + ".png");
+	$("#mockup").attr("src", "assets/images/interface_" + id + ".jpg");
 
 	interface.currentGallery = id;
 

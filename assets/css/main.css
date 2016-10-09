@@ -260,7 +260,7 @@ html, body {
         html #wrapper main section .lead, body #wrapper main section .lead {
           font-size: 1.1em;
           line-height: 1.6em;
-          margin-bottom: 36px; }
+          margin-bottom: 24px; }
         @media (max-width: 400px) {
           html #wrapper main section .lead, body #wrapper main section .lead {
             font-size: 1.1em;
@@ -541,27 +541,12 @@ img {
   #more-feature i {
     font-size: 48px; }
 
-@media (max-width: 1024px) {
-  #mockup-holder {
-    min-height: auto !important; } }
 #mockup-container {
   min-height: calc(100vh - 60px); }
 
-@media (max-width: 1024px) {
-  #mockup-container {
-    min-height: auto !important; }
-
-  #more-feature {
-    display: none; } }
 .max-height {
   height: calc(100vh - 60px); }
 
-@media (max-width: 1024px) {
-  .max-height {
-    height: auto !important; }
-
-  .splash-section {
-    position: static !important; } }
 .splash-section {
   position: relative;
   top: -30px; }
@@ -574,7 +559,7 @@ img {
   text-decoration: none; }
 
 #alt-platform {
-  margin-bottom: 36px;
+  margin-bottom: 12px;
   font-size: 0.7em;
   text-align: center; }
   #alt-platform .platform-alt {
@@ -596,13 +581,6 @@ img {
     font-size: 48px;
     cursor: pointer; }
 
-@media (max-width: 1025px) {
-  .mockup-active {
-    position: static !important;
-    background-color: #F6F6F6; }
-
-  #gallery-controllers {
-    display: none !important; } }
 #close-carousel {
   position: absolute;
   top: 0px;
@@ -610,5 +588,31 @@ img {
   font-size: 34px;
   padding: 12px 6px;
   cursor: pointer; }
+
+.no-margin {
+  margin: 0px !important; }
+
+@media (max-width: 1024px), (max-height: 700px) {
+  #mockup-holder {
+    min-height: auto !important; }
+
+  #mockup-container {
+    min-height: auto !important; }
+
+  #more-feature {
+    display: none; }
+
+  .max-height {
+    height: auto !important; }
+
+  .splash-section {
+    position: static !important; }
+
+  .mockup-active {
+    position: static !important;
+    background-color: #F6F6F6; }
+
+  #gallery-controllers {
+    display: none !important; } }
 
 /*# sourceMappingURL=main.css.map */
