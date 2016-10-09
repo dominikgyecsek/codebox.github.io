@@ -59,6 +59,10 @@ Interface.prototype.init = function() {
 	$(".platform[data-platform='" + platform + "']").show();
 	$(".platform-alt[data-platform='" + platform + "']").hide();
 
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$("html").addClass("mobile");
+	}
+
 	setTimeout(function() {
 		$(".right.gallery-swipe").first().trigger("click");
 		interface.initilizeCarousel();
