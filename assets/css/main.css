@@ -24,7 +24,7 @@ html, body {
     position: relative;
     cursor: pointer;
     float: left;
-    margin: 5px 0px; }
+    margin: 2px 0px; }
   html .center, body .center {
     text-align: center; }
   html .section-header, body .section-header {
@@ -143,7 +143,7 @@ html, body {
       html #wrapper main .full-height, body #wrapper main .full-height {
         height: 100%; }
       html #wrapper main section[data-section-id='0'], body #wrapper main section[data-section-id='0'] {
-        padding-bottom: 130px; }
+        padding-bottom: 150px; }
       html #wrapper main section[data-section-id='1'], body #wrapper main section[data-section-id='1'] {
         background-color: #646363 !important;
         padding-bottom: 140px; }
