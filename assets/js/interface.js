@@ -226,15 +226,15 @@ Interface.prototype.scroll = function ( $this ) {
 
 	interface.prevScroll = scrollPosition;
 
-	setTimeout(function() {
-		$this = $("section");
-		var scrollPosition = $this.scrollTop();
-		var scrollHeight = $this[0].scrollHeight;
-		var outerHeight = $this.outerHeight();
-		alert("ScrollPos: " + scrollPosition + ", ScrollHe: " + scrollHeight + ", outerHeight: " + outerHeight);
-	}, 1000);
-
 }
 
 var interface = new Interface();
 interface.init();
+
+setInterval(function() {
+	$this = $("section");
+	var scrollPosition = $this.scrollTop();
+	var scrollHeight = $this[0].scrollHeight;
+	var outerHeight = $this.outerHeight();
+	alert("ScrollPos: " + scrollPosition + ", ScrollHe: " + scrollHeight + ", outerHeight: " + outerHeight);
+}, 5000);
