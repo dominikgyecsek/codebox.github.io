@@ -11,20 +11,21 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
-	<link rel="icon" href="assets/images/fav_16.png" sizes="16x16" type="image/png">
-	<link rel="icon" href="assets/images/fav_32.png" sizes="32x32" type="image/png">
-	<link rel="icon" href="assets/images/fav_48.png" sizes="48x48" type="image/png">
-	<link rel="icon" href="assets/images/fav_64.png" sizes="64x64" type="image/png">
-	<link rel="icon" href="assets/images/fav_128.png" sizes="128x128" type="image/png">
-	<link rel="icon" href="assets/images/fav_192.png" sizes="192x192" type="image/png">
-	<link rel="icon" href="assets/images/fav_256.png" sizes="256x256" type="image/png">
+	<link rel="icon" href="assets/images/fav_16.gif" sizes="16x16" type="image/gif">
+	<link rel="icon" href="assets/images/fav_32.gif" sizes="32x32" type="image/gif">
+	<link rel="icon" href="assets/images/fav_64.gif" sizes="64x64" type="image/gif">
+	<link rel="icon" href="assets/images/fav_128.gif" sizes="128x128" type="image/gif">
+	<link rel="icon" href="assets/images/fav_192.gif" sizes="192x192" type="image/gif">
+	
+	<meta name="description" content="CodeBox is a cross-platform Snippet Editor">
+	<meta name="keywords" content="codebox, code, box, snippet, editor">
+	<meta name="author" content="Dominik Gyecsek">
 
 	<meta property="og:url"           content="http://www.dominikgyecsek.com/codebox/" />
 	<meta property="og:type"          content="Software" />
 	<meta property="og:title"         content="CodeBox" />
 	<meta property="og:description"   content="CodeBox is a user-friendly snippet manager which changes the way you organize your code snippets, and provides a seamless synchronization across Windows, Linux and Mac" />
 	<meta property="og:image"         content="assets/images/fav_256.png" />
-
 
 </head>
 <body>
@@ -611,98 +612,93 @@
 
 			<div class="container">
 
-				<form>
+				<div class="row">
 
-					<div class="row">
+					<div class="col-md-1 col-sm-hide"> &nbsp </div>
 
+					<div class="col-md-10 col-sm-12" style="margin:30px 10px;">
 
-						<div class="col-md-1 col-sm-hide"> &nbsp </div>
-
-						<div class="col-md-10 col-sm-12" style="margin:30px 10px;">
-
-							If you experiencing some kind of error or have any question about CodeBox, or would just like to give a feedback or recomend a new feature fill this form or write an email to <a id="email-me" href="mailto:dominik.gyecsek@gmail.com">dominik.gyecsek@gmail.com</a>
-
-						</div>
-
-						<div class="col-md-1 col-sm-hide"> &nbsp </div>
+						If you experiencing some kind of error or have any question about CodeBox, or would just like to give a feedback or recomend a new feature fill this form or write an email to <a id="email-me" href="mailto:dominik.gyecsek@gmail.com">dominik.gyecsek@gmail.com</a>
 
 					</div>
 
-					<div class="row">
+					<div class="col-md-1 col-sm-hide"> &nbsp </div>
+
+				</div>
+
+				<div class="row">
 
 
-						<div class="col-md-1 col-sm-hide"> &nbsp </div>
+					<div class="col-md-1 col-sm-hide"> &nbsp </div>
 
-						<div class="col-md-5 col-sm-12">
+					<div class="col-md-5 col-sm-12">
 
-							<div class="input-holder">
-								<label>Name</label>
-								<input class="contact-input">			
-							</div>			
-
-						</div>
-
-						<div class="col-md-5 col-sm-12">
-
-							<div class="input-holder input-holder-space">
-								<label>E-mail</label>
-								<input class="contact-input">	
-							</div>					
-
-						</div>
-
-						<div class="col-md-1 col-sm-hide"> &nbsp </div>
+						<div class="input-holder">
+							<label>Name</label>
+							<input id="name-2" class="contact-input">			
+						</div>			
 
 					</div>
 
-					<div class="row">
+					<div class="col-md-5 col-sm-12">
 
-
-						<div class="col-md-1 col-sm-hide"> &nbsp </div>
-
-						<div class="col-md-10 col-sm-12">
-
-							<div class="input-holder input-holder-space">
-								<label>Subject</label>
-								<input class="contact-input">		
-							</div>				
-
-						</div>
-
-						<div class="col-md-1 col-sm-hide"> &nbsp </div>
+						<div class="input-holder input-holder-space">
+							<label>E-mail</label>
+							<input id="email-2" class="contact-input">	
+						</div>					
 
 					</div>
 
-					<div class="row">
+					<div class="col-md-1 col-sm-hide"> &nbsp </div>
+
+				</div>
+
+				<div class="row">
 
 
-						<div class="col-md-1 col-sm-hide"> &nbsp </div>
+					<div class="col-md-1 col-sm-hide"> &nbsp </div>
 
-						<div class="col-md-10 col-sm-12">
-				
-							<div class="input-holder textarea input-holder-space">
-								<label>Message</label>
-								<textarea class="contact-input"></textarea>
-							</div>
+					<div class="col-md-10 col-sm-12">
 
-						</div>
-
-						<div class="col-md-1 col-sm-hide"> &nbsp </div>
+						<div class="input-holder input-holder-space">
+							<label>Subject</label>
+							<input id="subject" class="contact-input">		
+						</div>				
 
 					</div>
 
+					<div class="col-md-1 col-sm-hide"> &nbsp </div>
 
-					<div class="row">
+				</div>
 
-						<div class="col-ms-12" style="text-align:center;">
-								
-							<button id="send-feedback">Submit</button>
+				<div class="row">
 
+
+					<div class="col-md-1 col-sm-hide"> &nbsp </div>
+
+					<div class="col-md-10 col-sm-12">
+			
+						<div class="input-holder textarea input-holder-space">
+							<label>Message</label>
+							<textarea id="msg" class="contact-input"></textarea>
 						</div>
 
 					</div>
 
-				</form>
+					<div class="col-md-1 col-sm-hide"> &nbsp </div>
+
+				</div>
+
+
+				<div class="row">
+
+					<div class="col-ms-12" style="text-align:center;">
+							
+						<button id="send-feedback">Submit</button>
+
+					</div>
+
+				</div>
 
 			</div>
 
@@ -826,9 +822,8 @@ ga('send', 'pageview');
 
 </script>
 
-<!--<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>-->
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 
-<script src="assets/js/jquery-3.1.0.min.js"></script>
 <script src="assets/js/interface.js"></script>
 
 </body>

@@ -12,6 +12,7 @@ $(document).ready(function() {
 	$(".menu-toggle-btn").click(interface.toggleMenu);
 	$(".nav-links").click( function() { interface.switchSection( $(this) ) } )
 	$("section").scroll(function() { interface.scroll( $(this) ) })
+	$("#send-feedback").click( server.msg );
 	$(".gallery-swipe, #auto-swipe").click(function() { 
 
 		var left = false;
@@ -42,6 +43,11 @@ $(document).ready(function() {
 
 	})
 
+	$(".input-holder:not(.textarea)").keyup(function(e) {
+		if (e.keyCode == 13)
+			$("#send-feedback").trigger("click");
+	})
+
 })
 
 var Server = function() {
@@ -62,9 +68,46 @@ Server.prototype.validate = function() {
 	
 }
 
+Server.prototype.msg = function() {
+
+	$(".input-holder").removeClass("error");
+
+	var name = $("#name-2").val();
+    if ( (name.length == 0) || (name.length > 128) ) {
+    	$("#name-2").parent().addClass("error");
+    	return;
+    }
+
+	var email = $("#email-2").val();
+	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    result = re.test(email);
+
+    if (!result) {
+    	$("#email-2").parent().addClass("error");
+    	return;
+    }
+
+    var msg = $("#msg").val();
+
+    if ( (msg.length == 0) || (msg.length > 2048) ) {
+    	$("#msg").parent().addClass("error");
+    	return;
+    }
+
+    var subject = $("#subject").val();
+
+    if ( (subject.length == 0) || (subject.length > 256) ) {
+    	$("#subject").parent().addClass("error");
+    	return;
+    }
+
+    server.sendMsg(["2", email, name, msg, subject]);
+
+}
+
 Server.prototype.sendMsg = function( data ) {
 	
-	console.log(data);
+	$(".input-holder").removeClass("error");
 	
 	$.ajax({
 		url: '/CodeBox/assets/php/cbnc.php',
@@ -80,6 +123,9 @@ Server.prototype.sendMsg = function( data ) {
 			if (data[0] == "1") {
 				$("#email, #notify-me").fadeOut();
 				interface.openNotification("You will be notified when CodeBox is ready", true);
+			} else if (data[0] == "2") {
+				interface.openNotification("Message Sent", true);
+				$(".contact-input").val("");
 			}
 			
 		},
@@ -230,11 +276,3 @@ Interface.prototype.scroll = function ( $this ) {
 
 var interface = new Interface();
 interface.init();
-
-setInterval(function() {
-	$this = $("section");
-	var scrollPosition = $this.scrollTop();
-	var scrollHeight = $this[0].scrollHeight;
-	var outerHeight = $this.outerHeight();
-	alert("ScrollPos: " + scrollPosition + ", ScrollHe: " + scrollHeight + ", outerHeight: " + outerHeight);
-}, 5000);
