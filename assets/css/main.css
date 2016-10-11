@@ -192,27 +192,27 @@ html, body {
         html #wrapper main section .section-header, body #wrapper main section .section-header {
           z-index: 10; }
           html #wrapper main section .section-header h1, body #wrapper main section .section-header h1 {
-            text-align: center;
-            color: gainsboro; }
+            text-align: center; }
         html #wrapper main section .section-header.col-sm-12, body #wrapper main section .section-header.col-sm-12 {
           float: left;
           width: 100%; }
         html #wrapper main section .section-header.not-loaded, body #wrapper main section .section-header.not-loaded {
           background: darkslategray !important; }
         html #wrapper main section .section-header[data-header='1'], body #wrapper main section .section-header[data-header='1'] {
-          background: url(../images/image_header_1.png);
           background-position: center center;
-          background-size: cover; }
+          background-size: cover;
+          background-color: rgba(0, 0, 0, 0.2);
+          color: gainsboro; }
         html #wrapper main section .section-header[data-header='2'], body #wrapper main section .section-header[data-header='2'] {
-          background: url(../images/image_header_2.png);
           background-position: center center;
-          background-size: cover; }
+          background-size: cover;
+          background-color: rgba(0, 0, 0, 0.2);
+          color: gainsboro; }
         html #wrapper main section .section-header[data-header='3'], body #wrapper main section .section-header[data-header='3'] {
-          background: url(../images/image_header_3.png);
-          background-position: center center;
-          background-size: cover; }
+          color: #7393A7; }
         html #wrapper main section .section-header[data-header='4'], body #wrapper main section .section-header[data-header='4'] {
-          background: url(../images/image_header_4.png); }
+          background: url(../images/image_header_4.png);
+          color: gainsboro; }
         html #wrapper main section #action-btns, body #wrapper main section #action-btns {
           margin: 36px 0px 0px 0px; }
           html #wrapper main section #action-btns button, body #wrapper main section #action-btns button {
