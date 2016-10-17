@@ -27,9 +27,6 @@ html, body {
     margin: 2px 0px; }
   html .center, body .center {
     text-align: center; }
-  html .section-header, body .section-header {
-    font-size: 1.8em;
-    padding: 30px 0px; }
   html .sub-section-header, body .sub-section-header {
     margin-top: 0px !important;
     text-align: center;
@@ -125,6 +122,8 @@ html, body {
           border-bottom: 1px solid transparent; }
         html #wrapper nav #nav-link-group li:hover, body #wrapper nav #nav-link-group li:hover {
           border-bottom: 1px solid #757575; }
+        html #wrapper nav #nav-link-group li.active-nav-section, body #wrapper nav #nav-link-group li.active-nav-section {
+          border-bottom: 1px solid #757575; }
       html #wrapper nav li.section-link, html #wrapper nav li.redirect-link, body #wrapper nav li.section-link, body #wrapper nav li.redirect-link {
         cursor: pointer; }
     html #wrapper #mockup-holder, body #wrapper #mockup-holder {
@@ -173,46 +172,6 @@ html, body {
         html #wrapper main section .feature-icon, body #wrapper main section .feature-icon {
           width: 64px;
           height: 64px; }
-        html #wrapper main section .section-picture-full, body #wrapper main section .section-picture-full {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0px;
-          z-index: 1; }
-        html #wrapper main section .section-picture-full[data-picture='3'], body #wrapper main section .section-picture-full[data-picture='3'] {
-          background: #E8ECF1; }
-        html #wrapper main section .section-picture-full[data-picture='2'], body #wrapper main section .section-picture-full[data-picture='2'] {
-          background: #5588A3;
-          height: 100%; }
-        html #wrapper main section .section-picture-full[data-picture='1'], body #wrapper main section .section-picture-full[data-picture='1'] {
-          background: #646363;
-          height: 100%; }
-        html #wrapper main section .section-picture-full[data-picture='4'], body #wrapper main section .section-picture-full[data-picture='4'] {
-          height: 100%; }
-        html #wrapper main section .section-header, body #wrapper main section .section-header {
-          z-index: 10; }
-          html #wrapper main section .section-header h1, body #wrapper main section .section-header h1 {
-            text-align: center; }
-        html #wrapper main section .section-header.col-sm-12, body #wrapper main section .section-header.col-sm-12 {
-          float: left;
-          width: 100%; }
-        html #wrapper main section .section-header.not-loaded, body #wrapper main section .section-header.not-loaded {
-          background: darkslategray !important; }
-        html #wrapper main section .section-header[data-header='1'], body #wrapper main section .section-header[data-header='1'] {
-          background-position: center center;
-          background-size: cover;
-          background-color: rgba(0, 0, 0, 0.2);
-          color: gainsboro; }
-        html #wrapper main section .section-header[data-header='2'], body #wrapper main section .section-header[data-header='2'] {
-          background-position: center center;
-          background-size: cover;
-          background-color: rgba(0, 0, 0, 0.2);
-          color: gainsboro; }
-        html #wrapper main section .section-header[data-header='3'], body #wrapper main section .section-header[data-header='3'] {
-          color: #7393A7; }
-        html #wrapper main section .section-header[data-header='4'], body #wrapper main section .section-header[data-header='4'] {
-          background: url(../images/image_header_4.png);
-          color: gainsboro; }
         html #wrapper main section #action-btns, body #wrapper main section #action-btns {
           margin: 36px 0px 0px 0px; }
           html #wrapper main section #action-btns button, body #wrapper main section #action-btns button {
@@ -260,7 +219,8 @@ html, body {
         html #wrapper main section .lead, body #wrapper main section .lead {
           font-size: 1.1em;
           line-height: 1.6em;
-          margin-bottom: 24px; }
+          margin-bottom: 12px;
+          padding: 0px 15px; }
         @media (max-width: 400px) {
           html #wrapper main section .lead, body #wrapper main section .lead {
             font-size: 1.1em;

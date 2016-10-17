@@ -47,6 +47,11 @@ $(document).ready(function() {
 		if (e.keyCode == 13)
 			$("#send-feedback").trigger("click");
 	})
+	
+	$("#buy-btn").click(function() {
+		$("#buy-hide").hide();
+		$("#buy-show").show();
+	})
 
 })
 
@@ -239,6 +244,9 @@ Interface.prototype.switchSection = function( $this ) {
 
 	var sectionId = $this.attr("data-section-id-a");
 	var currectSectionId = $(".section-active").first().attr("data-section-id");
+	
+	$(".active-nav-section").removeClass("active-nav-section");
+	$this.parent().addClass("active-nav-section");
 
 	if (sectionId == currectSectionId) return;
 
@@ -247,7 +255,6 @@ Interface.prototype.switchSection = function( $this ) {
 	$(".section-active").removeClass("section-active").addClass("section-out");
 
 	$("section[data-section-id='" + sectionId + "']").addClass("section-active");
-	$(".section-header[data-header='" + sectionId + "']").removeClass("not-loaded");
 
 	setTimeout(function() {
 		$(".section-out").removeClass("section-out");
